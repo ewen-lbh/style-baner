@@ -1,4 +1,7 @@
 function ban_style(styletoban, query_sel = '*') {
+	if(!query_sel) {
+		query_sel = "*";
+	}
 	removed_from_count = 0;
 	dom = document.querySelectorAll(query_sel)
 	for (var i = dom.length - 1; i >= 0; i--) {
@@ -14,7 +17,7 @@ function ban_style(styletoban, query_sel = '*') {
 			removed_from_count++;
 		}
 	}
-	if(removed_from_count > 0) {
+	if(removed_from_count > 0 & !query_sel) {
 		alert("===NO "+unCamelCase(styletoban).toUpperCase()+"===\n"+removed_from_count+" elements had their text shadows removed");
 	}
 }
