@@ -6,6 +6,7 @@ Requires a User JS extension, here's a good one for [Chrome](https://chrome.goog
 
 ## Usage
 This file contains a `ban_style` function that takes two variables: the name of the css property (in camelCase), and a querySelector string (defaults to `*`).
+
 By default, the script makes a call and blocks the `textShadow` attribute on font, h1, h2, h3, h4, h5, p and li elements.
 You can make your own call, or delete this one, obviously.
 
