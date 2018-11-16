@@ -11,7 +11,7 @@ By default, the script makes a call and blocks the `textShadow` attribute on fon
 You can make your own call, or delete this one, obviously.
 
 ## Notifying style bans
-When a style is removed (or rather set to `none`), an `alert` dialog pops up, warning you about how many elements have been changed. It also appends a warning at the end of the `title` attribute (or creates one if the element doesn't have one).
+When a style is removed (or rather set to `none`), an `alert` dialog pops up, warning you about how many elements have been changed. It also appends a warning at the end of the `title` attribute (or creates it if the element doesn't have one).
 
 ## Multiple style bans
 Since each call to the function generates an alert popup, you can disable them by setting the second function argument to `false`.
