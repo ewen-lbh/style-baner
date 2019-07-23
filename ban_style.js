@@ -5,14 +5,14 @@ function ban_style(styletoban, query_sel = '*') {
 	removed_from_count = 0;
 	dom = document.querySelectorAll(query_sel)
 	for (var i = dom.length - 1; i >= 0; i--) {
-		has_text_shadow = (dom[i].style[styletoban] !== "" ? true : false)
-		if(has_text_shadow) {
+		has_banned_style = (dom[i].style[styletoban] !== "" ? true : false)
+		if(has_banned_style) {
 			dom[i].style[styletoban] = 'none';
 			orig_title = dom[i].getAttribute('title')
 			if(orig_title !== null) {
-				dom[i].setAttribute('title', orig_title+' // This element had a text shadow applied.');
+				dom[i].setAttribute('title', orig_title+' // This element had a '+unCamelCase(styletoban)+' applied.');
 			} else {
-				dom[i].setAttribute('title', 'This element had a text shadow applied.');
+				dom[i].setAttribute('title', 'This element had a '+unCamelCase(styletoban)+' applied.');
 			}
 			removed_from_count++;
 		}
